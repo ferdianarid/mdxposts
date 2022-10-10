@@ -5,6 +5,7 @@ import * as fs from "fs"
 import path from 'path'
 import matter from 'gray-matter'
 import { NextPage } from 'next'
+import Link from 'next/link'
 
 const Posts: NextPage = ({ posts }: any) => {
     return (
@@ -16,14 +17,17 @@ const Posts: NextPage = ({ posts }: any) => {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <div style={{ width: "100%", padding: "40px" }}>
-                    <div style={{ display: "grid", gridTemplateColumns: "auto auto auto", gridGap: "20px" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: "20px" }}>
                         {posts.map((post: any, idx: number) => (
                             <div key={idx}>
                                 <div style={{ position: "relative", width: "100%", height: "220px" }}>
-                                    <Image src={post.frontMatter.cover} layout="fill" alt={post.frontMatter.title} />
+                                    <Image src={post.frontMatter.cover} style={{ borderRadius: "16px" }} objectFit="cover" layout="fill" alt={post.frontMatter.title} />
                                 </div>
                                 <h1>{post.frontMatter.title}</h1>
                                 <p>{post.frontMatter.description}</p>
+                                <Link href={`/posts/${post.slug}`}>
+                                    <button className='detail-button'>Details</button>
+                                </Link>
                             </div>
                         ))}
                     </div>

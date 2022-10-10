@@ -5,3 +5,20 @@
     scroll-behavior: smooth;
     font-family: "Gilroy", sans-serif;
 }
+
+.detail-button {
+    padding: 16px 36px;
+    border-radius: 8px;
+    background-color: darkblue;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.detail-button:hover {
+    cursor: pointer;
+    background-color: blue;
+}
