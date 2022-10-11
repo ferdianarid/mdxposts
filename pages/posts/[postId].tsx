@@ -1,12 +1,12 @@
-import { NextPage } from 'next'
-import { Fragment } from 'react'
-import Head from 'next/head'
+import { NextPage } from "next"
+import { Fragment } from "react"
+import Head from "next/head"
 import * as fs from "fs"
-import path from 'path'
+import path from "path"
 import matter from "gray-matter"
-import { MDXRemote } from 'next-mdx-remote'
+import { MDXRemote } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
-import Image from 'next/image'
+import Image from "next/image"
 
 const DetailPost: NextPage = ({ frontMatter, mdxSource }: any) => {
     const { title, category, description, author, cover } = frontMatter

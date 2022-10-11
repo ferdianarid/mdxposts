@@ -1,11 +1,11 @@
-import { Fragment } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
+import { Fragment } from "react"
+import Head from "next/head"
+import Image from "next/image"
 import * as fs from "fs"
-import path from 'path'
-import matter from 'gray-matter'
-import { NextPage } from 'next'
-import Link from 'next/link'
+import path from "path"
+import matter from "gray-matter"
+import { NextPage } from "next"
+import Link from "next/link"
 
 const Posts: NextPage = ({ posts }: any) => {
     return (
@@ -40,7 +40,7 @@ const Posts: NextPage = ({ posts }: any) => {
 export async function getStaticProps() {
     const files = fs.readdirSync(path.join("md", "posts"))
 
-    const posts = files.map(filename => {
+    const posts = files.map((filename) => {
         const slug = filename.replace(".mdx", "")
 
         const markdownWithMeta = fs.readFileSync(path.join("md", "posts", filename), "utf-8")

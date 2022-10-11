@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { Fragment } from 'react'
+import type { NextPage } from "next"
+import Head from "next/head"
+import { Fragment } from "react"
 
 const Home: NextPage = () => {
   return (
