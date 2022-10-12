@@ -8,6 +8,7 @@ import "@styles/globals.css"
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   // NProgress.configure({ trickleRate: 0.02, trickleSpeed: 800 })
+
   useEffect(() => {
     const handleStart = (url: string) => {
       console.log(`Current path route: ${url}`)

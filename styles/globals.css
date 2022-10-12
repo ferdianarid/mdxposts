@@ -6,6 +6,10 @@
     font-family: "Gilroy", sans-serif;
 }
 
+body {
+    background-color: rgb(242, 242, 242);
+}
+
 @font-face {
     font-family: "gilroy-bold";
     src: local("GilroyBold"), url(../public/fonts/Gilroy-Bold.woff) format("woff");
