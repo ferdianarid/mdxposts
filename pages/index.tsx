@@ -1,6 +1,7 @@
 import PageLayouts from "@layouts/PageLayouts"
 import type { NextPage } from "next"
 import Head from "next/head"
+import Link from "next/link"
 import { Fragment } from "react"
 
 const Home: NextPage = () => {
@@ -12,7 +13,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full px-6 md:px-24 py-10">
-        <PageLayouts></PageLayouts>
+        <PageLayouts>
+          <div className="w-full mx-auto max-w-2xl text-center">
+            <h1 className="text-center mt-24 font-gilroy-bold text-5xl mb-5">Create Post with Markdown</h1>
+            <p className="text-center text-sm leading-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat ducimus rerum totam? Nobis explicabo enim ipsa ad consequuntur delectus quisquam officia porro illo eum doloribus tenetur laboriosam culpa, in vitae.</p>
+            <Link href="/posts">
+              <button className="py-3 px-10 font-gilroy-bold rounded-lg bg-neutral-50 hover:bg-neutral-60 text-neutral-10 mt-5">See posts</button>
+            </Link>
+          </div>
+        </PageLayouts>
       </div>
     </Fragment>
   )
