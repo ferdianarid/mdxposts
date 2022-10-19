@@ -19,7 +19,7 @@ const Posts: NextPage = ({ posts }: any) => {
                 </Head>
                 <div className="w-full max-w-[1440px] mx-auto px-6 md:px-24 py-10">
                     <PageLayouts>
-                        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                             {posts.map((post: any, idx: number) => (
                                 <div key={idx} className="p-4 rounded-2xl bg-neutral-10">
                                     <div className="w-full h-[220px] relative">
